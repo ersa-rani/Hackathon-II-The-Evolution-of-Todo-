@@ -1,55 +1,44 @@
-# [PROJECT_NAME] Constitution
-<!-- Example: Spec Constitution, TaskFlow Constitution, etc. -->
+<!-- 
+Sync Impact Report:
+- Version change: N/A → 1.0.0
+- Modified principles: N/A (new constitution)
+- Added sections: All principles and sections
+- Removed sections: N/A
+- Templates requiring updates: ✅ .specify/templates/plan-template.md, ✅ .specify/templates/spec-template.md, ✅ .specify/templates/tasks-template.md
+- Follow-up TODOs: None
+-->
+# Todo CLI Project Constitution
 
 ## Core Principles
 
-### [PRINCIPLE_1_NAME]
-<!-- Example: I. Library-First -->
-[PRINCIPLE_1_DESCRIPTION]
-<!-- Example: Every feature starts as a standalone library; Libraries must be self-contained, independently testable, documented; Clear purpose required - no organizational-only libraries -->
+### Python 3.13+ and Clean Code
+Use Python 3.13+ features and maintain clean, readable code following established best practices. All code must be well-structured, maintainable, and follow Python design patterns that enhance readability and reduce complexity.
 
-### [PRINCIPLE_2_NAME]
-<!-- Example: II. CLI Interface -->
-[PRINCIPLE_2_DESCRIPTION]
-<!-- Example: Every library exposes functionality via CLI; Text in/out protocol: stdin/args → stdout, errors → stderr; Support JSON + human-readable formats -->
+### CLI Only Interface
+The application is a command-line interface only with no GUI components. All interactions with the application must occur through command-line arguments and standard input/output streams.
 
-### [PRINCIPLE_3_NAME]
-<!-- Example: III. Test-First (NON-NEGOTIABLE) -->
-[PRINCIPLE_3_DESCRIPTION]
-<!-- Example: TDD mandatory: Tests written → User approved → Tests fail → Then implement; Red-Green-Refactor cycle strictly enforced -->
+### In-Memory Storage
+Store all todo data in memory during runtime with no persistent storage. The application state exists only for the duration of the program execution and is lost when the program terminates.
 
-### [PRINCIPLE_4_NAME]
-<!-- Example: IV. Integration Testing -->
-[PRINCIPLE_4_DESCRIPTION]
-<!-- Example: Focus areas requiring integration tests: New library contract tests, Contract changes, Inter-service communication, Shared schemas -->
+### PEP8 Compliance
+Follow PEP8 style guidelines for all Python code. All code must pass PEP8 linting checks and maintain consistency with Python style conventions to ensure readability and maintainability.
 
-### [PRINCIPLE_5_NAME]
-<!-- Example: V. Observability, VI. Versioning & Breaking Changes, VII. Simplicity -->
-[PRINCIPLE_5_DESCRIPTION]
-<!-- Example: Text I/O ensures debuggability; Structured logging required; Or: MAJOR.MINOR.BUILD format; Or: Start simple, YAGNI principles -->
+### Structured Todo Model
+Each todo must have id, title, description, and completed status fields. The data model is fixed and must not be extended with additional fields beyond these four required attributes.
 
-### [PRINCIPLE_6_NAME]
+### Modular Code Structure
+Split code into main.py, models.py, services.py with clear separation of concerns. Each module has a distinct responsibility: main.py handles CLI parsing, models.py defines data structures, and services.py contains business logic.
 
+## Additional Constraints
 
-[PRINCIPLE__DESCRIPTION]
+No extra features beyond the specified requirements. The implementation must strictly adhere to the defined functionality without adding bells and whistles that weren't explicitly requested.
 
-## [SECTION_2_NAME]
-<!-- Example: Additional Constraints, Security Requirements, Performance Standards, etc. -->
+## Implementation Guidelines
 
-[SECTION_2_CONTENT]
-<!-- Example: Technology stack requirements, compliance standards, deployment policies, etc. -->
-
-## [SECTION_3_NAME]
-<!-- Example: Development Workflow, Review Process, Quality Gates, etc. -->
-
-[SECTION_3_CONTENT]
-<!-- Example: Code review requirements, testing gates, deployment approval process, etc. -->
+Use dataclasses where appropriate for structured data representation. Dataclasses provide clean, readable code for representing structured data like todo items while reducing boilerplate code.
 
 ## Governance
-<!-- Example: Constitution supersedes all other practices; Amendments require documentation, approval, migration plan -->
 
-[GOVERNANCE_RULES]
-<!-- Example: All PRs/reviews must verify compliance; Complexity must be justified; Use [GUIDANCE_FILE] for runtime development guidance -->
+Constitution supersedes all other practices; amendments require documentation and approval. All development must comply with these principles, and any deviation requires explicit amendment to this constitution with proper approval.
 
-**Version**: [CONSTITUTION_VERSION] | **Ratified**: [RATIFICATION_DATE] | **Last Amended**: [LAST_AMENDED_DATE]
-<!-- Example: Version: 2.1.1 | Ratified: 2025-06-13 | Last Amended: 2025-07-16 -->
+**Version**: 1.0.0 | **Ratified**: 2026-01-03 | **Last Amended**: 2026-01-03

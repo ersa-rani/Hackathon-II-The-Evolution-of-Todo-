@@ -1,0 +1,17 @@
+{
+  "todos": [
+    {
+      "id": 3,
+      "title": "Test Todo",
+      "description": "Test Description",
+      "completed": false
+    },
+    {
+      "id": 4,
+      "title": "My Task",
+      "description": "Detailed description",
+      "completed": false
+    }
+  ],
+  "next_id": 5
+}
